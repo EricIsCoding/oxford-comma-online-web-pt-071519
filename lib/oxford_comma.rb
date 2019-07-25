@@ -7,7 +7,7 @@ def oxford_comma(array)
     if counter == 0 
       oxford_string << "#{array[counter]}"
     elsif array.length == 2
-      array.join(" and ")
+      oxford_string = array.join(" and ")
     elsif counter == array.length - 1
       oxford_string << ", and #{array[counter]}"
     else
