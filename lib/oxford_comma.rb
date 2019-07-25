@@ -3,7 +3,7 @@ require "pry"
 def oxford_comma(array)
   counter = 0
   oxford_string = ""
-  array.eac_with_index do |word, index|
+  array.each_with_index do |word, index|
     if index == 0 
       oxford_string << "#{word}"
     elsif array.length == 2
