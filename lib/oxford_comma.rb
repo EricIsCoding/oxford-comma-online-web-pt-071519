@@ -3,8 +3,8 @@ require "pry"
 def oxford_comma(array)
   counter = 0
   oxford_string = ""
-  while counter < array.length
-    if counter == 0 
+  array.eac_with_index do |word, index|
+    if index == 0 
       oxford_string << "#{array[counter]}"
     elsif array.length == 2
       oxford_string = array.join(" and ")
@@ -13,7 +13,6 @@ def oxford_comma(array)
     else
       oxford_string << ", #{array[counter]}"
     end
-    counter += 1
   end
   oxford_string
 end
