@@ -5,13 +5,13 @@ def oxford_comma(array)
   oxford_string = ""
   array.eac_with_index do |word, index|
     if index == 0 
-      oxford_string << "#{array[counter]}"
+      oxford_string << "#{word}"
     elsif array.length == 2
       oxford_string = array.join(" and ")
-    elsif counter == array.length - 1
-      oxford_string << ", and #{array[counter]}"
+    elsif index == array.length - 1
+      oxford_string << ", and #{word}"
     else
-      oxford_string << ", #{array[counter]}"
+      oxford_string << ", #{word}"
     end
   end
   oxford_string
